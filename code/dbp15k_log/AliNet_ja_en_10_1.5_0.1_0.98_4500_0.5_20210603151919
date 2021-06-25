@@ -1,0 +1,88 @@
+Namespace(activation='tanh', adj_number=1, batch_size=4500, dropout_rate=0.5, embedding_module='AliNet', eval_csls=2, eval_freq=5, eval_metric='inner', eval_normalize=True, eval_threads_num=10, hits_k=[1, 5, 10, 50], input='/home/nlp/users/MM/code/data/DBP15K/ja_en/mtranse/0_3/', is_save=False, layer_dims=[50, 40, 30], max_epoch=1000, min_rel_win=15, neg_margin=1.5, neg_multi=10, neg_param=0.1, num_features_nonzero=0.0, output='/home/nlp/users/MM/code/data/output/results/', rel_param=0.01, sim_th=0.5, start_augment=4, start_valid=10, truncated_epsilon=0.98)
+triples num 77214
+head ent num 15000
+total ent num 19814
+ave outs: 5
+additional triples: 14263
+triples num 93484
+head ent num 15000
+total ent num 19780
+ave outs: 6
+additional triples: 17125
+total ents: 39594
+total rels: 1299 1153 2452
+total triples: 77214 + 93484 = 170698
+To aligned entities: 10500
+before enhanced: 77214 93484
+after enhanced: 3025 2023
+before removing unlinked triples: 175746
+after removing unlinked triples: 151464
+load saved adj data from /home/nlp/users/MM/code/data/DBP15K/ja_en/mtranse/0_3/alinet_saved_data.pkl
+Getting AliNet model...
+epoch 1, loss: 9048.8740, cost time: 1.9022s
+epoch 2, loss: 6359.0000, cost time: 1.6578s
+epoch 3, loss: 4740.1460, cost time: 1.7147s
+epoch 4, loss: 3852.8770, cost time: 1.5939s
+epoch 5, loss: 3188.1643, cost time: 1.4209s
+epoch 6, loss: 2669.2222, cost time: 1.0362s
+epoch 7, loss: 2254.0947, cost time: 1.3290s
+epoch 8, loss: 1945.1786, cost time: 1.3245s
+epoch 9, loss: 1689.1613, cost time: 1.2875s
+epoch 10, loss: 1453.6697, cost time: 1.1946s
+quick results: hits@[1, 5, 10, 50] = [15.486 30.448 36.829 51.076]%, time = 3.104 s 
+neighbors num 300
+finding neighbors for sampling costs time: 8.1125s
+epoch 11, loss: 4165.8970, cost time: 1.6522s
+epoch 12, loss: 3953.5254, cost time: 1.6387s
+epoch 13, loss: 3628.5923, cost time: 1.6912s
+epoch 14, loss: 3229.6753, cost time: 1.8070s
+epoch 15, loss: 2858.3333, cost time: 1.8397s
+quick results: hits@[1, 5, 10, 50] = [21.162 38.79  44.819 57.219]%, time = 3.323 s 
+neighbors num 300
+finding neighbors for sampling costs time: 8.6185s
+epoch 16, loss: 3013.2607, cost time: 1.4609s
+epoch 17, loss: 2731.8098, cost time: 1.5551s
+epoch 18, loss: 2428.6123, cost time: 1.6808s
+epoch 19, loss: 2171.5999, cost time: 1.6251s
+epoch 20, loss: 1925.8748, cost time: 1.6539s
+quick results: hits@[1, 5, 10, 50] = [23.943 41.19  46.467 57.381]%, time = 3.204 s 
+neighbors num 300
+finding neighbors for sampling costs time: 9.1540s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 2744/7217=0.380
+after filtering by sim and nearest k, right align: 2426/5688=0.427
+before editing (<-), empty aligned pairs
+update wrongly:  0 greedy update wrongly:  0
+after editing (<-), right align: 2426/5688=0.427
+after editing (->), right align: 2227/4645=0.479
+before enhanced: 77214 93484
+after enhanced: 17303 12921
+before removing unlinked triples: 200922
+after removing unlinked triples: 176640
+generating one-adj costs time: 0.6398s
+gcn update adj...
+gcn update adj...
+epoch 21, loss: 2362.8362, cost time: 1.6483s
+epoch 22, loss: 2261.4441, cost time: 1.5705s
+epoch 23, loss: 2133.0339, cost time: 1.5526s
+epoch 24, loss: 1998.1478, cost time: 1.4701s
+epoch 25, loss: 1820.6316, cost time: 1.6381s
+quick results: hits@[1, 5, 10, 50] = [25.448 42.21  47.019 57.486]%, time = 3.293 s 
+neighbors num 300
+finding neighbors for sampling costs time: 8.3631s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 2792/7404=0.377
+after filtering by sim and nearest k, right align: 2530/6039=0.419
+before editing (<-), right align: 2227/4645=0.479
+update wrongly:  128 greedy update wrongly:  128
+after editing (<-), right align: 2621/6492=0.404
+after editing (->), right align: 2411/5468=0.441
+before enhanced: 77214 93484
+after enhanced: 20695 16064
+before removing unlinked triples: 207457
+after removing unlinked triples: 183175
+generating one-adj costs time: 0.6504s
+gcn update adj...
+gcn update adj...

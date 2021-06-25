@@ -1,0 +1,352 @@
+Namespace(activation='tanh', adj_number=1, batch_size=4500, dropout_rate=0.5, embedding_module='AliNet', eval_csls=2, eval_freq=5, eval_metric='inner', eval_normalize=True, eval_threads_num=10, hits_k=[1, 5, 10, 50], input='/home/nlp/users/MM/code/data/DBP15K/ja_en/mtranse/0_3/', is_save=False, layer_dims=[50, 40, 30], max_epoch=1000, min_rel_win=15, neg_margin=1.5, neg_multi=10, neg_param=0.1, num_features_nonzero=0.0, output='/home/nlp/users/MM/code/data/output/results/', rel_param=0.01, sim_th=0.5, start_augment=4, start_valid=10, truncated_epsilon=0.98)
+triples num 77214
+head ent num 15000
+total ent num 19814
+ave outs: 5
+additional triples: 14263
+triples num 93484
+head ent num 15000
+total ent num 19780
+ave outs: 6
+additional triples: 17125
+total ents: 39594
+total rels: 1299 1153 2452
+total triples: 77214 + 93484 = 170698
+To aligned entities: 10500
+before enhanced: 77214 93484
+after enhanced: 3025 2023
+before removing unlinked triples: 175746
+after removing unlinked triples: 151464
+load saved adj data from /home/nlp/users/MM/code/data/DBP15K/ja_en/mtranse/0_3/alinet_saved_data.pkl
+Getting AliNet model...
+epoch 1, loss: 9099.9307, cost time: 1.9966s
+epoch 2, loss: 6386.4497, cost time: 1.3437s
+epoch 3, loss: 4752.7251, cost time: 1.2978s
+epoch 4, loss: 3830.8655, cost time: 1.2394s
+epoch 5, loss: 3159.0261, cost time: 1.3215s
+epoch 6, loss: 2646.8591, cost time: 1.2613s
+epoch 7, loss: 2241.2737, cost time: 1.3302s
+epoch 8, loss: 1920.0594, cost time: 1.1116s
+epoch 9, loss: 1628.2404, cost time: 1.3411s
+epoch 10, loss: 1420.3861, cost time: 1.2600s
+quick results: hits@[1, 5, 10, 50] = [16.81  32.876 39.124 54.352]%, time = 2.893 s 
+neighbors num 300
+finding neighbors for sampling costs time: 8.3344s
+epoch 11, loss: 4239.8447, cost time: 1.6568s
+epoch 12, loss: 3987.6003, cost time: 1.5061s
+epoch 13, loss: 3634.3638, cost time: 1.4870s
+epoch 14, loss: 3293.6611, cost time: 1.6168s
+epoch 15, loss: 2880.3855, cost time: 1.5964s
+quick results: hits@[1, 5, 10, 50] = [22.914 40.876 46.924 59.952]%, time = 3.070 s 
+neighbors num 300
+finding neighbors for sampling costs time: 8.0365s
+epoch 16, loss: 3020.7776, cost time: 1.6237s
+epoch 17, loss: 2705.4929, cost time: 1.4821s
+epoch 18, loss: 2412.1453, cost time: 1.4956s
+epoch 19, loss: 2133.5813, cost time: 1.6139s
+epoch 20, loss: 1908.9084, cost time: 1.5756s
+quick results: hits@[1, 5, 10, 50] = [25.581 42.619 47.752 59.133]%, time = 3.126 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.8254s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 2862/7285=0.393
+after filtering by sim and nearest k, right align: 2539/5682=0.447
+before editing (<-), empty aligned pairs
+update wrongly:  0 greedy update wrongly:  0
+after editing (<-), right align: 2539/5682=0.447
+after editing (->), right align: 2341/4694=0.499
+before enhanced: 77214 93484
+after enhanced: 16365 12899
+before removing unlinked triples: 199962
+after removing unlinked triples: 175680
+generating one-adj costs time: 0.6197s
+gcn update adj...
+gcn update adj...
+epoch 21, loss: 2353.5093, cost time: 1.5782s
+epoch 22, loss: 2238.9614, cost time: 1.6165s
+epoch 23, loss: 2114.3291, cost time: 1.5688s
+epoch 24, loss: 1951.1429, cost time: 1.3443s
+epoch 25, loss: 1800.0905, cost time: 1.5669s
+quick results: hits@[1, 5, 10, 50] = [26.771 43.143 47.905 58.219]%, time = 3.064 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.7389s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 2897/7529=0.385
+after filtering by sim and nearest k, right align: 2595/6065=0.428
+before editing (<-), right align: 2341/4694=0.499
+update wrongly:  149 greedy update wrongly:  149
+after editing (<-), right align: 2683/6525=0.411
+after editing (->), right align: 2478/5544=0.447
+before enhanced: 77214 93484
+after enhanced: 21018 16341
+before removing unlinked triples: 208057
+after removing unlinked triples: 183775
+generating one-adj costs time: 0.6391s
+gcn update adj...
+gcn update adj...
+epoch 26, loss: 1955.9869, cost time: 1.6195s
+epoch 27, loss: 1852.2601, cost time: 1.5176s
+epoch 28, loss: 1741.0795, cost time: 1.6211s
+epoch 29, loss: 1645.2285, cost time: 1.6169s
+epoch 30, loss: 1537.3047, cost time: 1.5090s
+quick results: hits@[1, 5, 10, 50] = [27.962 43.933 48.467 58.152]%, time = 3.166 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.8106s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3067/7850=0.391
+after filtering by sim and nearest k, right align: 2760/6466=0.427
+before editing (<-), right align: 2478/5544=0.447
+update wrongly:  114 greedy update wrongly:  114
+after editing (<-), right align: 2856/7050=0.405
+after editing (->), right align: 2616/6050=0.432
+before enhanced: 77214 93484
+after enhanced: 24340 18614
+before removing unlinked triples: 213652
+after removing unlinked triples: 189370
+generating one-adj costs time: 0.6484s
+gcn update adj...
+gcn update adj...
+epoch 31, loss: 1634.9138, cost time: 1.5102s
+epoch 32, loss: 1562.2346, cost time: 1.4585s
+epoch 33, loss: 1492.5869, cost time: 1.6068s
+epoch 34, loss: 1405.8273, cost time: 1.6179s
+epoch 35, loss: 1337.1062, cost time: 1.6084s
+quick results: hits@[1, 5, 10, 50] = [28.61  44.533 48.638 57.505]%, time = 3.180 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.9410s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3164/7984=0.396
+after filtering by sim and nearest k, right align: 2874/6712=0.428
+before editing (<-), right align: 2616/6050=0.432
+update wrongly:  92 greedy update wrongly:  92
+after editing (<-), right align: 2960/7295=0.406
+after editing (->), right align: 2755/6402=0.430
+before enhanced: 77214 93484
+after enhanced: 26134 20086
+before removing unlinked triples: 216918
+after removing unlinked triples: 192636
+generating one-adj costs time: 0.6474s
+gcn update adj...
+gcn update adj...
+epoch 36, loss: 1416.0463, cost time: 1.4129s
+epoch 37, loss: 1372.6696, cost time: 1.5883s
+epoch 38, loss: 1312.1190, cost time: 1.5995s
+epoch 39, loss: 1255.5923, cost time: 1.5718s
+epoch 40, loss: 1189.3491, cost time: 1.5929s
+quick results: hits@[1, 5, 10, 50] = [29.324 44.667 48.486 56.943]%, time = 3.162 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.6757s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3221/8234=0.391
+after filtering by sim and nearest k, right align: 2952/6902=0.428
+before editing (<-), right align: 2755/6402=0.430
+update wrongly:  89 greedy update wrongly:  89
+after editing (<-), right align: 3017/7497=0.402
+after editing (->), right align: 2832/6620=0.428
+before enhanced: 77214 93484
+after enhanced: 27467 20885
+before removing unlinked triples: 219050
+after removing unlinked triples: 194768
+generating one-adj costs time: 0.6692s
+gcn update adj...
+gcn update adj...
+epoch 41, loss: 1242.8767, cost time: 1.6347s
+epoch 42, loss: 1191.2526, cost time: 1.5879s
+epoch 43, loss: 1149.7468, cost time: 1.5211s
+epoch 44, loss: 1104.2271, cost time: 1.5990s
+epoch 45, loss: 1042.1234, cost time: 1.5557s
+quick results: hits@[1, 5, 10, 50] = [29.752 44.533 48.267 56.248]%, time = 3.176 s 
+neighbors num 300
+finding neighbors for sampling costs time: 7.1117s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3283/8343=0.394
+after filtering by sim and nearest k, right align: 2989/7069=0.423
+before editing (<-), right align: 2832/6620=0.428
+update wrongly:  90 greedy update wrongly:  90
+after editing (<-), right align: 3054/7609=0.401
+after editing (->), right align: 2874/6818=0.422
+before enhanced: 77214 93484
+after enhanced: 28522 21781
+before removing unlinked triples: 221001
+after removing unlinked triples: 196719
+generating one-adj costs time: 0.6591s
+gcn update adj...
+gcn update adj...
+epoch 46, loss: 1065.0099, cost time: 1.5831s
+epoch 47, loss: 1037.6926, cost time: 1.5945s
+epoch 48, loss: 1000.0455, cost time: 1.6040s
+epoch 49, loss: 964.9569, cost time: 1.6093s
+epoch 50, loss: 913.1519, cost time: 1.5917s
+quick results: hits@[1, 5, 10, 50] = [29.829 44.343 47.781 55.429]%, time = 3.022 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.8191s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3381/8455=0.400
+after filtering by sim and nearest k, right align: 3093/7272=0.425
+before editing (<-), right align: 2874/6818=0.422
+update wrongly:  74 greedy update wrongly:  74
+after editing (<-), right align: 3134/7783=0.403
+after editing (->), right align: 2940/6987=0.421
+before enhanced: 77214 93484
+after enhanced: 29374 22642
+before removing unlinked triples: 222714
+after removing unlinked triples: 198432
+generating one-adj costs time: 0.6848s
+gcn update adj...
+gcn update adj...
+epoch 51, loss: 933.0331, cost time: 1.6458s
+epoch 52, loss: 895.9319, cost time: 1.5223s
+epoch 53, loss: 872.6781, cost time: 1.6207s
+epoch 54, loss: 844.7579, cost time: 1.5634s
+epoch 55, loss: 806.6503, cost time: 1.3733s
+quick results: hits@[1, 5, 10, 50] = [30.124 43.952 47.343 54.752]%, time = 3.163 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.6408s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3414/8729=0.391
+after filtering by sim and nearest k, right align: 3141/7489=0.419
+before editing (<-), right align: 2940/6987=0.421
+update wrongly:  63 greedy update wrongly:  63
+after editing (<-), right align: 3180/7957=0.400
+after editing (->), right align: 2998/7131=0.420
+before enhanced: 77214 93484
+after enhanced: 30106 23146
+before removing unlinked triples: 223950
+after removing unlinked triples: 199668
+generating one-adj costs time: 0.6773s
+gcn update adj...
+gcn update adj...
+epoch 56, loss: 813.5252, cost time: 1.4492s
+epoch 57, loss: 788.1838, cost time: 1.5951s
+epoch 58, loss: 770.7927, cost time: 1.5923s
+epoch 59, loss: 738.2397, cost time: 1.5510s
+epoch 60, loss: 720.1476, cost time: 1.6191s
+quick results: hits@[1, 5, 10, 50] = [30.448 43.905 47.114 54.124]%, time = 3.097 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.8860s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3452/8761=0.394
+after filtering by sim and nearest k, right align: 3179/7586=0.419
+before editing (<-), right align: 2998/7131=0.420
+update wrongly:  56 greedy update wrongly:  56
+after editing (<-), right align: 3219/8038=0.400
+after editing (->), right align: 3052/7293=0.418
+before enhanced: 77214 93484
+after enhanced: 30993 23603
+before removing unlinked triples: 225294
+after removing unlinked triples: 201012
+generating one-adj costs time: 0.6912s
+gcn update adj...
+gcn update adj...
+epoch 61, loss: 719.8299, cost time: 1.6679s
+epoch 62, loss: 700.5547, cost time: 1.6168s
+epoch 63, loss: 676.6677, cost time: 1.5703s
+epoch 64, loss: 659.3973, cost time: 1.6108s
+epoch 65, loss: 636.4799, cost time: 1.5074s
+quick results: hits@[1, 5, 10, 50] = [30.562 43.524 46.733 53.505]%, time = 3.248 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.6827s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3480/8825=0.394
+after filtering by sim and nearest k, right align: 3231/7685=0.420
+before editing (<-), right align: 3052/7293=0.418
+update wrongly:  57 greedy update wrongly:  57
+after editing (<-), right align: 3272/8115=0.403
+after editing (->), right align: 3110/7401=0.420
+before enhanced: 77214 93484
+after enhanced: 31532 24010
+before removing unlinked triples: 226240
+after removing unlinked triples: 201958
+generating one-adj costs time: 0.6896s
+gcn update adj...
+gcn update adj...
+epoch 66, loss: 637.8248, cost time: 1.6150s
+epoch 67, loss: 625.5891, cost time: 1.6049s
+epoch 68, loss: 607.0329, cost time: 1.6513s
+epoch 69, loss: 589.5104, cost time: 1.6371s
+epoch 70, loss: 563.7194, cost time: 1.6200s
+quick results: hits@[1, 5, 10, 50] = [30.79  43.21  46.486 53.276]%, time = 3.196 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.6779s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3498/8861=0.395
+after filtering by sim and nearest k, right align: 3233/7760=0.417
+before editing (<-), right align: 3110/7401=0.420
+update wrongly:  63 greedy update wrongly:  63
+after editing (<-), right align: 3285/8173=0.402
+after editing (->), right align: 3126/7476=0.418
+before enhanced: 77214 93484
+after enhanced: 32060 24385
+before removing unlinked triples: 227143
+after removing unlinked triples: 202861
+generating one-adj costs time: 0.6812s
+gcn update adj...
+gcn update adj...
+epoch 71, loss: 569.9427, cost time: 1.6433s
+epoch 72, loss: 553.2722, cost time: 1.5304s
+epoch 73, loss: 545.1726, cost time: 1.6331s
+epoch 74, loss: 520.7996, cost time: 1.6330s
+epoch 75, loss: 504.2973, cost time: 1.5476s
+quick results: hits@[1, 5, 10, 50] = [30.952 43.048 46.238 52.733]%, time = 3.136 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.6783s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3553/9017=0.394
+after filtering by sim and nearest k, right align: 3295/7912=0.416
+before editing (<-), right align: 3126/7476=0.418
+update wrongly:  57 greedy update wrongly:  57
+after editing (<-), right align: 3329/8280=0.402
+after editing (->), right align: 3151/7550=0.417
+before enhanced: 77214 93484
+after enhanced: 32546 24634
+before removing unlinked triples: 227878
+after removing unlinked triples: 203596
+generating one-adj costs time: 0.6793s
+gcn update adj...
+gcn update adj...
+epoch 76, loss: 510.3947, cost time: 1.5490s
+epoch 77, loss: 503.8071, cost time: 1.6105s
+epoch 78, loss: 482.4168, cost time: 1.6079s
+epoch 79, loss: 472.7034, cost time: 1.5743s
+epoch 80, loss: 459.6519, cost time: 1.5779s
+quick results: hits@[1, 5, 10, 50] = [30.848 42.867 45.733 52.514]%, time = 3.171 s 
+neighbors num 300
+finding neighbors for sampling costs time: 6.6850s
+calculate sim mat...
+sim th: 0.5
+after filtering by sim threshold, right align: 3563/9071=0.393
+after filtering by sim and nearest k, right align: 3302/7949=0.415
+before editing (<-), right align: 3151/7550=0.417
+update wrongly:  57 greedy update wrongly:  57
+after editing (<-), right align: 3333/8310=0.401
+after editing (->), right align: 3161/7619=0.415
+before enhanced: 77214 93484
+after enhanced: 32986 24936
+before removing unlinked triples: 228620
+after removing unlinked triples: 204338
+generating one-adj costs time: 0.6750s
+gcn update adj...
+gcn update adj...
+epoch 81, loss: 459.1447, cost time: 1.5946s
+epoch 82, loss: 449.2099, cost time: 1.5361s
+epoch 83, loss: 445.0098, cost time: 1.5120s
+epoch 84, loss: 429.5395, cost time: 1.5721s
+epoch 85, loss: 418.8128, cost time: 1.5674s
+quick results: hits@[1, 5, 10, 50] = [30.762 42.629 45.41  52.143]%, time = 3.047 s 
+
+ == training stop == 
+
+accurate results: hits@[1, 5, 10, 50] = [30.762 42.629 45.41  52.143]%, mr = 1252.750, mrr = 0.363361, time = 5.051 s 
+accurate results with csls, hits@[1, 5, 10, 50] = [31.552 43.229 46.238 52.99 ]%, mr = 1158.077, mrr = 0.370977, time = 11.059 s 
